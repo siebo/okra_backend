@@ -8,6 +8,7 @@ class Objective(models.Model):
 
 class KeyResult(models.Model):
     title = models.CharField(max_length=128)
+    objective = models.ForeignKey(Objective, on_delete=models.CASCADE)
 
     def __str__(self):
         return self.title
